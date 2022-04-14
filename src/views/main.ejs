@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-theme="dark">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/main.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <title><%= title%></title>
+</head>
+<body id="body" class="dark">
+  <div class="nav">
+    <div class="left">
+      <span>STORICHAIN</span>
+      <input type="text" placeholder="Collection, item or user">
+    </div>
+    <div class="right">
+      <div class="login" onclick="location.href='/login'">
+        Sign in
+      </div>
+      <div class="mode_btn" onclick="mode_change()">
+        <ion-icon name="sunny"></ion-icon>
+      </div>
+      <script>
+        function mode_change(){
+          let theme = document.querySelector("html").getAttribute("data-theme");
+          theme == "dark" ? 
+          document.querySelector("html").setAttribute("data-theme", "light") :
+          document.querySelector("html").setAttribute("data-theme", "dark");
+          return;
+        }
+      </script>
+    </div>
+  </div>
+  <div class="main">
+    <div class="head">
+      <img src="/images/contents/natalya-letunova-FWxEbL34i4Y-unsplash.jpg" alt="">
+      <p>You may like these posts</p>
+    </div>
+    <div class="content">
+      <div class="top">
+        <img src="/images/contents/1E7822EA-D863-40A6-BF2F-DFE87DDCC75D.jpeg" alt="">
+      </div>
+      <div class="bottom">
+        <img src="/images/contents/61f63dad2a0deff4af2de44c83db7eb9dfda6aa4_re_1649773185271.jpeg">
+      </div>
+    </div>
+    <div class="content">
+      <div class="top">
+        <img src="/images/contents/larm-rmah-R1Ku62Z7zqE-unsplash.jpg" alt="">
+      </div>
+      <div class="bottom">
+        <img src="/images/contents/9a6f4f192fdc1f09b330ef5ee9875ae0cf3c3702.gif">
+      </div>
+    </div>
+    <div class="content">
+      <div class="top">
+        <img src="/images/contents/poptart1redrainbowfix_1.0.gif" alt="">
+      </div>
+      <div class="bottom">
+        <img src="/images/contents/08e42a21c6190f3c810ed18ce56e56166e7499d4.gif">
+      </div>
+    </div>
+    <div class="content">
+      <div class="top">
+        <img src="/images/contents/1E7822EA-D863-40A6-BF2F-DFE87DDCC75D.jpeg" alt="">
+      </div>
+      <div class="bottom">
+        <img src="/images/contents/61f63dad2a0deff4af2de44c83db7eb9dfda6aa4_re_1649773185271.jpeg">
+      </div>
+    </div>
+  </div>
+  <script>
+    window.onload=function(){
+      document.querySelector("html").setAttribute("data-theme", "dark")
+    }
+  </script>
+</body>
+</html>

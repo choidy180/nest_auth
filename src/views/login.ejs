@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/main.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <title><%= title%></title>
+</head>
+<body id="body" class="dark">
+  <div class="nav">
+    <div class="left">
+      <span>STORICHAIN</span>
+    </div>
+    <div class="right">
+      <div class="login" onclick="location.href='/'">
+        Home
+      </div>
+      <div class="mode_btn" onclick="mode_change()">
+        <ion-icon name="sunny"></ion-icon>
+      </div>
+      <script>
+        function mode_change(){
+          let theme = document.querySelector("html").getAttribute("data-theme");
+          theme == "dark" ? 
+          document.querySelector("html").setAttribute("data-theme", "light") :
+          document.querySelector("html").setAttribute("data-theme", "dark");
+          return;
+        }
+      </script>
+    </div>
+  </div>
+  <div id="login">
+    <div class="img">
+      <img src="/images/contents/187E8D06-9758-4E0F-A1C0-69A40FF96D2A.webp" alt="">
+    </div>
+    <div class="box">
+      <p class="title">Login</p>
+      <p class="sub_title">Please proceed with the certification using your membership information.</p>
+      <input type="text" class="inputId" placeholder="이메일(example@gmail.com)">
+      <input type="text" class="inputPwd" placeholder="비밀번호">
+      <button>Log-In</button>
+    </div>
+  </div>
+</body>
+<script>
+  window.onload=function(){
+    document.querySelector("html").setAttribute("data-theme", "dark")
+  }
+</script>
+</html>
